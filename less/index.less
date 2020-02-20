@@ -60,20 +60,19 @@ html, body {
 	height: 100%;
 	
 	background-color: lightgrey;
+	margin: 1%;
 	
 	
 	
 }
 
-h1, h2, h3, h4, h5{
-	
-}
+
 
 //Starting code here
 
 
 //here there be variables
-@fontstocolor: rgb(216, 176, 0);
+@fontstocolor: #8b5656;;
 
 //Here be thine mixins
 .centered(){
@@ -93,6 +92,12 @@ h1, h2, h3, h4, h5{
 	padding-bottom:1%;
 }
 
+.bordercontrol(){
+    	border-right: 1px black dotted;
+    	border-top: 1px black dotted;
+}
+
+//here begins the actual code
 
 header {
 	display:flex;
@@ -100,6 +105,8 @@ header {
 	width: 100%;
 	align-items: flex-start;
 	flex-wrap: wrap;
+	
+
 
 	nav {
 		width:100%;
@@ -109,46 +116,130 @@ header {
 		.centered();
 		border-bottom: 1px black dotted;
 		.marginator();
+
+		@media( max-width: 500px ) {
+			flex-direction: column;
+			align-items: center;}
 		
 		a{
 			text-decoration: none;
 			text-transform: uppercase;
-			color:  #272626;
+			color:  @fontstocolor;
+
+		
 		}
 	}
 
 	.nameandimg {
+
 		.centered();
 		width:100%;
 		background-color: lightgrey;
 		.marginator();
 		.bottomdots(); 
 
+		
+
 		button {
 			.centered();
 			margin-top: 2%;
 			background: none;
 			background-color: rgba(231, 180, 38, 0.644);
+			@media( max-width: 500px ) {
+				flex-direction: column;
+				justify-items: center;}
 
 			&:hover{
 				background-color: white;
 				
 			}
 			
-		}
+			
+		}//closes button
 		
 
 		img{
 			justify-content: flex-start;
-		}
-	}
 
-}
+			@media(max-width: 500px){
+				display: none;
+			}
+		}//closes img
+	}//closes name and image
+
+}//closes header
 
 h1 {
-	font-size: 4rem;
-}
+	font-size: 3rem;
+	@media( max-width: 500px ) {
+		font-size: 1.6rem;
+		text-align: center;
+	}
+	
+	
+}//coses h1
 
-.section1{
-	.centered();
-}
+//SECTION 1 of WHAT I CAN DO and WORK HISTORY 1
+.sectionone{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.marginator();
+	@media( max-width: 500px ) {
+		flex-direction: column;
+		align-items: center;}
+	
+	.workhistory{
+		padding-right: 2%;
+		.bordercontrol();
+		@media( max-width: 500px ) {
+			flex-direction: column;
+			align-items: center;}
+	
+	}//closes work history
+
+	ul{
+		list-style-type: square;
+		margin-left: 30%;
+	}
+		
+	.skills{
+		.centered();
+		}//closes skills
+	
+}//closes section1
+
+
+
+
+//SECTION 2 of LETS TALK and WH 2
+.sectiontwo{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.marginator();
+	flex-direction: row-reverse;
+	@media( max-width: 500px ) {
+		flex-direction: column;
+		align-items: center;}
+
+	.contact{
+		height: 48vh;
+		padding-right: 1%;
+		border-top: 1px black solid;
+		@media( max-width: 500px ) {
+			flex-direction: column;
+			align-items: center;
+			border-top: 0px;
+		}
+	}
+	
+	.past {
+		border-left: 1px dotted black;
+		padding-left: 1%;
+		padding-bottom: 1%;
+		padding-right: 1%;
+		border-bottom: 1px dotted black;
+	}
+
+}//closes section2
