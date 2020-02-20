@@ -1,1 +1,297 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  background-color: lightgrey;
+  margin: 1%;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Open Sans Condensed Light'), local('OpenSansCondensed-Light'), url(https://fonts.gstatic.com/s/opensanscondensed/v14/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMQg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Oxygen Regular'), local('Oxygen-Regular'), url(https://fonts.gstatic.com/s/oxygen/v9/2sDfZG1Wl4LcnbuKjk0j.ttf) format('truetype');
+}
+header {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+header nav {
+  width: 100%;
+  margin-bottom: 2%;
+  margin-top: 1%;
+  padding-bottom: 1%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px black dotted;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: 'Oxygen', sans-serif;
+}
+@media (max-width: 500px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+header nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #8b5656;
+}
+header .nameandimg {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  background-color: lightgrey;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-bottom: 1px black dotted;
+  margin-bottom: 2%;
+  padding-bottom: 1%;
+}
+header .nameandimg button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2%;
+  background: none;
+  background-color: rgba(231, 180, 38, 0.644);
+  text-decoration: none;
+}
+@media (max-width: 500px) {
+  header .nameandimg button {
+    flex-direction: column;
+    justify-items: center;
+  }
+}
+header .nameandimg button:hover {
+  background-color: white;
+  text-decoration: none;
+}
+header .nameandimg img {
+  justify-content: flex-start;
+}
+@media (max-width: 500px) {
+  header .nameandimg img {
+    display: none;
+  }
+}
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #8b5656;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+}
+.sectionone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+@media (max-width: 500px) {
+  .sectionone {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.sectionone .workhistory {
+  padding-right: 2%;
+  border-right: 1px black dotted;
+  border-top: 1px black dotted;
+}
+@media (max-width: 500px) {
+  .sectionone .workhistory {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.sectionone ul {
+  list-style-type: square;
+  margin-left: 30%;
+}
+.sectionone .skills {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.sectiontwo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  flex-direction: row-reverse;
+}
+@media (max-width: 500px) {
+  .sectiontwo {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.sectiontwo .contact {
+  height: 48vh;
+  padding-right: 1%;
+  border-top: 1px black solid;
+}
+@media (max-width: 500px) {
+  .sectiontwo .contact {
+    flex-direction: column;
+    align-items: center;
+    border-top: 0px;
+  }
+}
+.sectiontwo .past {
+  border-left: 1px dotted black;
+  padding-left: 1%;
+  padding-bottom: 1%;
+  padding-right: 1%;
+  border-bottom: 1px dotted black;
+}
