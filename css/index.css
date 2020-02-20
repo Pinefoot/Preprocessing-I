@@ -198,6 +198,7 @@ header .nameandimg button {
   margin-top: 2%;
   background: none;
   background-color: rgba(231, 180, 38, 0.644);
+  text-decoration: none;
 }
 @media (max-width: 500px) {
   header .nameandimg button {
@@ -207,6 +208,7 @@ header .nameandimg button {
 }
 header .nameandimg button:hover {
   background-color: white;
+  text-decoration: none;
 }
 header .nameandimg img {
   justify-content: flex-start;
