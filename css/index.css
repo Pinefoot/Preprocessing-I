@@ -129,6 +129,25 @@ body {
   background-color: lightgrey;
   margin: 1%;
 }
+h1,
+h2,
+h3 {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Open Sans Condensed Light'), local('OpenSansCondensed-Light'), url(https://fonts.gstatic.com/s/opensanscondensed/v14/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMQg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Oxygen Regular'), local('Oxygen-Regular'), url(https://fonts.gstatic.com/s/oxygen/v9/2sDfZG1Wl4LcnbuKjk0j.ttf) format('truetype');
+}
 header {
   display: flex;
   justify-content: space-evenly;
@@ -147,6 +166,7 @@ header nav {
   border-bottom: 1px black dotted;
   margin-left: 10%;
   margin-right: 10%;
+  font-family: 'Oxygen', sans-serif;
 }
 @media (max-width: 500px) {
   header nav {
@@ -198,6 +218,8 @@ header .nameandimg img {
 }
 h1 {
   font-size: 3rem;
+  text-transform: uppercase;
+  color: #8b5656;
 }
 @media (max-width: 500px) {
   h1 {

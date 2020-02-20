@@ -66,13 +66,21 @@ html, body {
 	
 }
 
+h1, h2, h3 {
+	font-family: @fonttype;
+	
+}
+
 
 
 //Starting code here
-
-
+//here there be fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oxygen&display=swap');
+//font-family: 'Open Sans Condensed', sans-serif;
+//font-family: 'Oxygen', sans-serif;
 //here there be variables
-@fontstocolor: #8b5656;;
+@fontstocolor1: #8b5656;
+@fonttype: 'Open Sans Condensed', sans-serif;
 
 //Here be thine mixins
 .centered(){
@@ -116,6 +124,8 @@ header {
 		.centered();
 		border-bottom: 1px black dotted;
 		.marginator();
+		font-family: 'Oxygen', sans-serif;
+		
 
 		@media( max-width: 500px ) {
 			flex-direction: column;
@@ -124,7 +134,7 @@ header {
 		a{
 			text-decoration: none;
 			text-transform: uppercase;
-			color:  @fontstocolor;
+			color:  @fontstocolor1;
 
 		
 		}
@@ -137,6 +147,7 @@ header {
 		background-color: lightgrey;
 		.marginator();
 		.bottomdots(); 
+		
 
 		
 
@@ -171,9 +182,12 @@ header {
 
 h1 {
 	font-size: 3rem;
+	text-transform: uppercase;
+	color: @fontstocolor1;
 	@media( max-width: 500px ) {
 		font-size: 1.6rem;
 		text-align: center;
+		 
 	}
 	
 	
